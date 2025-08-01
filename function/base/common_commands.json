@@ -1,0 +1,4 @@
+{
+    "列出当前目录": "dir",
+    "查看Python版本": "python --version"
+}

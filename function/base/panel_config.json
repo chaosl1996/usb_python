@@ -1,0 +1,15 @@
+{
+  "button_order": [
+    "更新库",
+    "安装新库",
+    "执行Python程序",
+    "面板设置",
+    "查看版本"
+  ],
+  "custom_buttons": [
+    {
+      "name": "Hello World",
+      "file_path": "G:/Documents/Python/script/hello_world.py"
+    }
+  ]
+}
