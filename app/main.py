@@ -258,13 +258,10 @@ class PythonEnvManager:
 
             if file_path:
                 self.update_status(f"正在执行：{os.path.basename(file_path)}...")
-                try:
-                    # 执行Python脚本
-                    subprocess.Popen([sys.executable, file_path])
-                    self.update_status("程序执行中")
-                except Exception as e:
-                    self.update_status("程序执行失败")
-                    messagebox.showerror("错误", f"执行程序时出错：{str(e)}")
+                # 自动显示输出窗口
+                self.output_manager.show_output_window()
+                # 使用output_manager执行命令并显示输出
+                self.output_manager.run_command_with_output([sys.executable, file_path], f"执行程序 {os.path.basename(file_path)}")
             else:
                 self.update_status("已取消选择")
         except Exception as e:
